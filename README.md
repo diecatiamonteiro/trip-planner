@@ -2,8 +2,6 @@
 
 TripPlanner helps you create detailed travel plans with interactive maps, activity scheduling, and budget tracking.
 
-[![Live Demo](https://img.shields.io/badge/demo-live-green.svg)](trip-planner-lovat-seven.vercel.app)
-
 ## Table of Contents
 - [Demo](#demo)
 - [Introduction](#introduction)
@@ -14,7 +12,7 @@ TripPlanner helps you create detailed travel plans with interactive maps, activi
 - [Preview](#preview)
 
 ## Demo
-🔗 [Try it now!](trip-planner-lovat-seven.vercel.app)
+🔗 [Try it now!](https://trip-planner-lovat-seven.vercel.app)
 
 ![Home Page](public/screenshots/homepage.png)
 
