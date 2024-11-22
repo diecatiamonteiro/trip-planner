@@ -2,7 +2,7 @@
 
 TripPlanner helps you create detailed travel plans with interactive maps, activity scheduling, and budget tracking.
 
-<img src="public/screenshots/homepage.png" alt="Home Page" width="400" />
+<img src="public/screenshots/homepage.png" alt="Home Page" width="500" />
 
 <br>
 
@@ -22,6 +22,8 @@ TripPlanner helps you create detailed travel plans with interactive maps, activi
 TripPlanner is a comprehensive travel planning application that combines interactive mapping, detailed activity scheduling, and budget management.
 
 I created TripPlanner as both a learning experience and a practical solution for my own travel planning needs. This project allowed me to dive deep into React development, work with external APIs, and implement user authentication while building something I would actually use.
+
+TripPlanner is designed for **desktop use only**. For the best experience, please access the application on a desktop browser.
 
 #### TripPlanner in a nutshell:
 
