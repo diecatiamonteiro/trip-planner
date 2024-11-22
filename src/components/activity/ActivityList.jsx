@@ -49,8 +49,8 @@ export default function ActivityList({ date }) {
           key={activity.id}
           activity={activity}
           index={getGlobalIndex(index)}
-          onRemove={handleRemoveActivity}
-          onChange={handleEditActivity}
+          handleRemoveActivity={handleRemoveActivity}
+          handleEditActivity={handleEditActivity}
         />
       ))}
     </div>

@@ -2,10 +2,9 @@ import { BsTrash } from "react-icons/bs";
 
 export default function ActivityCard({
   activity,
-  date,
   index,
-  onRemove,
-  onEdit,
+  handleRemoveActivity,
+  handleEditActivity,
 }) {
   function handleKeyDown(e, activity, field) {
     if (e.key === "Enter") {
