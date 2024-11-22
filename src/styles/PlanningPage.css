@@ -213,17 +213,3 @@
   opacity: 0.9;
   scale: 0.98;
 }
-
-/* media queries */
-
-@media (max-width: 1400px) {
-  .planning-container {
-    grid-template-columns: 25% 35% 40%;
-  }
-}
-
-@media (max-width: 1200px) {
-  .planning-container {
-    grid-template-columns: 30% 35% 35%;
-  }
-}
