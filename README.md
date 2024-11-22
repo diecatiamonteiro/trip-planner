@@ -95,6 +95,7 @@ TripPlanner is designed for **desktop use only**. For the best experience, pleas
 - Firebase Firestore
 - HERE Maps API
 - Vite build tool
+- Vercel for deployment
 
 #### Additional Tools
 
