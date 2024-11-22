@@ -1,0 +1,229 @@
+.planning-container {
+  gap: 20px;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 9rem;
+  display: flex;
+  text-align: left;
+  height: calc(100vh - 9rem);
+}
+
+/* Side bar left */
+
+.days-sidebar {
+  background: var(--light-green-color);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  left: 20px;
+  width: 12%;
+  overflow-y: auto;
+  position: fixed;
+  top: 4.5rem;
+  height: calc(100vh - 9rem);
+}
+.days-sidebar h2 {
+  font-size: 1.6rem;
+  color: var(--dark-green-color);
+  margin-bottom: 2rem;
+}
+.days-sidebar h3 {
+  font-size: 1.3rem;
+  color: var(--green-color);
+}
+
+.days-sidebar ul {
+  list-style: none;
+  padding: 0;
+  cursor: pointer;
+  color: var(--gray-text-color);
+}
+
+.days-sidebar li {
+  padding: 0.8rem;
+  border-radius: 8px;
+  transition: background-color 0.1s, color 0.1s;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.days-sidebar li:hover {
+  font-weight: bold;
+}
+
+.days-sidebar li.selected {
+  background-color: var(--orange-color);
+  font-weight: bold;
+}
+.days-sidebar li.selected a {
+  color: white;
+}
+
+.days-sidebar a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* buttons on sidebar left*/
+
+.manage-trip-button,
+.start-new-plan-button,
+.update-trip-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.8rem;
+  width: 80%;
+  margin-bottom: 1rem;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.manage-trip-button:hover,
+.start-new-plan-button:hover,
+.update-trip-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.manage-trip-button:active,
+.start-new-plan-button:active,
+.update-trip-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  opacity: 0.9;
+  scale: 0.98;
+}
+
+.manage-trip-button {
+  background-color: var(--green-color);
+}
+
+.start-new-plan-button {
+  background-color: transparent;
+  border: 1px solid var(--green-color);
+  color: var(--green-color);
+}
+
+.update-trip-button {
+  background-color: var(--dark-green-color);
+}
+.update-trip-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+.update-trip-button:hover:not(:disabled) {
+  background-color: var(--dark-green-color);
+}
+
+/* middle section */
+
+.activities-section {
+  background: white;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  left: 14%;
+  width: 34%;
+  height: calc(100vh - 9rem);
+  position: fixed;
+  top: 4.5rem;
+}
+.activities-section h2 {
+  font-size: 1.6rem;
+  color: var(--dark-green-color);
+  margin-bottom: 2rem;
+}
+.activities-section h3 {
+  font-size: 1.3rem;
+  color: var(--green-color);
+}
+.activities-section h3 span {
+  color: var(--orange-color);
+}
+/* map */
+
+.map-section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: calc(100vh - 9rem);
+  right: 20px;
+  width: 50%;
+  position: fixed;
+  top: 4.5rem;
+  flex: 1; /* Allow to grow and fill space */
+}
+
+/* custom scrollbar styling */
+.days-sidebar::-webkit-scrollbar,
+.activities-section::-webkit-scrollbar {
+  width: 8px;
+}
+.days-sidebar::-webkit-scrollbar-track,
+.activities-section::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+.days-sidebar::-webkit-scrollbar-thumb,
+.activities-section::-webkit-scrollbar-thumb {
+  background: var(--light-green-color);
+  border-radius: 4px;
+}
+.days-sidebar::-webkit-scrollbar-thumb:hover,
+.activities-section::-webkit-scrollbar-thumb:hover {
+  background: var(--green-color);
+}
+
+/* when no plan is selected */
+
+.planning-container .no-plan-message {
+  margin-top: 9rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+.planning-container .no-plan-message p {
+  color: #666;
+}
+
+.planning-container .no-plan-message a button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--green-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.planning-container .no-plan-message a button:hover {
+  background-color: var(--dark-green-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.planning-container .no-plan-message a button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  opacity: 0.9;
+  scale: 0.98;
+}
+
+/* media queries */
+
+@media (max-width: 1400px) {
+  .planning-container {
+    grid-template-columns: 25% 35% 40%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .planning-container {
+    grid-template-columns: 30% 35% 35%;
+  }
+}

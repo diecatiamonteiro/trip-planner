@@ -1,0 +1,67 @@
+:root {
+  font-family: "Source Sans 3", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  --gray-text-color: #333;
+  --green-color: #36ba98;
+  --dark-green-color: #136850;
+  --light-green-color: #e7f0ee;
+  --dark-orange-color: #db4a26;
+  --orange-color: #f4a261;
+  --light-orange-color: #e9c46a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+} */
+
+/* BACKGROUND */
+
+body {
+  margin: 0;
+  padding-top: 4.5rem; /* Add padding to the top to account for the navbar */
+  padding-bottom: 8rem;
+  min-width: 320px;
+  height: 100vh;
+  overflow: hidden;
+  background-color: white;
+}
+
+/* TEXT */
+
+p {
+  color: var(--gray-text-color); /* Main text color */
+  margin-bottom: 1em; /* Space between paragraphs */
+}
+
+/* BUTTONS */
+
+button {
+  font-weight: bold;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5em; /* Smaller heading on mobile */
+  }
+
+  button {
+    width: 100%; /* Full-width buttons on mobile */
+  }
+
+  .card {
+    padding: 1.5em; /* Less padding on smaller screens */
+  }
+}

@@ -1,0 +1,126 @@
+/* ACTIVITY FORM */
+.activity-form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.activity-form input {
+  font-size: 1rem;
+}
+
+.activity-input-container {
+  position: relative;
+  width: 100%;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.suggestions-list li {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.suggestions-list li:hover {
+  background-color: #f5f5f5;
+}
+
+.activity-form input {
+  padding: 8px;
+  border: 1px solid var(--light-green-color);
+  border-radius: 4px;
+}
+
+.activity-form-time-price {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  height: 50px;
+}
+.activity-form-time-price input {
+  flex: 1; /* This makes each input take equal space */
+  padding: 8px;
+  border: 1px solid var(--light-green-color);
+  border-radius: 4px;
+}
+
+.activity-form button {
+  padding: 10px;
+  background: var(--green-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.activity-form button:hover {
+  background: var(--dark-green-color);
+}
+
+.activity-form-time-price input[type="time"] {
+  font-size: 1rem;
+  text-align: center;
+}
+
+.activity-form-time-price input[type="number"] {
+  width: 100%;
+}
+
+/* ACTIVITY CARD */
+
+.start-time p,
+.end-time p {
+  margin: 0;
+  padding: 0;
+  font-size: 0.8rem;
+}
+
+.start-time input,
+.end-time input {
+  width: 100%;
+  height: 50%;
+}
+
+.activity-card input {
+  border: none;
+  background: transparent;
+  font-size: inherit;
+  width: 100%;
+  padding: 4px;
+}
+
+.activity-card input:hover {
+  background: var(--light-green-color);
+}
+
+.activity-card input:focus {
+  background: white;
+  outline: 1px solid var(--dark-green-color);
+}
+
+.time-inputs {
+  display: flex;
+  gap: 1rem;
+}
+
+input#title {
+  width: 100%;
+}

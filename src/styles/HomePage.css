@@ -1,0 +1,144 @@
+.home-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 3rem;
+  color: var(--dark-green-color);
+  margin-bottom: 2rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+  margin: 1.5rem 0 1rem;
+  text-align: left;
+}
+
+form {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* input fields */
+
+.destination-input-container {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.destination-input-container input {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  border: 2px solid var(--light-green-color);
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+.destination-input-container input:focus {
+  outline: none;
+  border-color: var(--dark-green-color);
+}
+
+.input-dates-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.input-dates-container div {
+  width: 100%;
+}
+.input-dates-container div p {
+  margin-bottom: 0.5rem;
+  text-align: left;
+  margin-left: 1rem;
+  color: gray;
+}
+
+input[type="date"] {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.1rem;
+  border: 2px solid var(--light-green-color);
+  border-radius: 8px;
+  background: white;
+}
+
+/* submit button */
+
+button[type="submit"] {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: var(--green-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+button[type="submit"]:hover {
+  background-color: var(--dark-green-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+button[type="submit"]:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  opacity: 0.9;
+  scale: 0.98;
+}
+
+/* suggestions list */
+
+.suggestions-list {
+  position: absolute;
+  top: calc(100% + 5px);
+  left: 0;
+  width: 100%;
+  background: white;
+  border: 1px solid var(--light-green-color);
+  border-radius: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.suggestions-list li {
+  padding: 1rem;
+  cursor: pointer;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.suggestions-list li:last-child {
+  border-bottom: none;
+}
+
+.suggestions-list li:hover {
+  background-color: var(--light-green-color);
+}
+
+@media (max-width: 768px) {
+  .home-container {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}

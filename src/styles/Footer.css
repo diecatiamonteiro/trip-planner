@@ -1,0 +1,20 @@
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  background-color: var(--dark-green-color);
+  text-align: center;
+  width: 100%;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+footer p {
+  color: white;
+}
+footer a {
+  color: white;
+}

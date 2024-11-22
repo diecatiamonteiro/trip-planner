@@ -1,0 +1,123 @@
+/* whole navbar */
+nav {
+  background-color: var(--green-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+/* logo (left)*/
+.nav-logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.nav-logo-icon {
+  font-size: 1.8rem;
+  margin-right: 0.5rem;
+}
+
+.nav-logo p {
+  font-size: 1.1rem;
+  font-weight: bold;
+  line-height: 0.9;
+  margin: 0;
+  padding: 0.2rem;
+  text-align: left;
+  color: white;
+}
+.nav-logo:hover {
+  color: var(--dark-green-color);
+}
+.nav-logo:hover .nav-logo-icon,
+.nav-logo:hover p {
+  color: var(--dark-green-color);
+}
+
+/* nav links (center */
+.nav-links a {
+  padding: 0.5rem 2rem;
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: color 0.2s, transform 0.2s, text-shadow 0.2s;
+}
+.nav-links a:hover {
+  color: var(--dark-green-color);
+  transform: scale(1.05);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* nav user menu (my trips & profile) */
+.user-menu a {
+  font-size: 1.2rem;
+  color: var(--light-green-color);
+  font-weight: bold;
+  text-decoration: none;
+  margin: 0 1rem;
+  transition: color 0.2s, transform 0.2s, text-shadow 0.2s;
+}
+.user-menu a:hover {
+  color: var(--dark-green-color);
+  transform: scale(1.05);
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+/* nav buttons (logout) */
+.user-menu button {
+  font-size: 1rem;
+  margin: 0 1.2rem;
+  background-color: var(--dark-orange-color);
+  font-size: 1rem;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.user-menu button:hover {
+  cursor: pointer;
+  background-color: #b42c09;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* nav buttons (login & signup) */
+.nav-button {
+  margin: 0 0.8rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-button button {
+  background-color: var(--dark-green-color);
+  font-size: 1rem;
+  border: none;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.nav-button button:hover {
+  cursor: pointer;
+  background-color: var(--dark-orange-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav-button.signup-btn button {
+  background-color: transparent;
+  border: 1px solid var(--dark-green-color);
+  transition: color 0.2s;
+}
+.nav-button.signup-btn button:hover {
+  cursor: pointer;
+}

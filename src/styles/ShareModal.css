@@ -1,0 +1,118 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999; /* Increased z-index */
+}
+
+.share-modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  animation: modalFadeIn 0.3s ease-out;
+  z-index: 10000; /* Increased z-index */
+}
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  background: none;
+  font-size: 1rem;
+  color: white;
+  cursor: pointer;
+  background-color: var(--dark-orange-color);
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.close-button:hover {
+  background-color: #b42c09;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.close-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  opacity: 0.9;
+  scale: 0.98;
+}
+
+.share-modal h2 {
+  margin-bottom: 1.5rem;
+  color: var(--dark-green-color);
+}
+
+.share-link-section,
+.share-email-section {
+  margin-bottom: 1.5rem;
+}
+
+.share-modal h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+  color: var(--dark-green-color);
+  text-align: center;
+}
+
+.trip-dates {
+  text-align: center;
+}
+.link-container {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.link-container input,
+.share-email-section input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 1px solid var(--light-green-color);
+  border-radius: 4px;
+}
+
+.share-modal button:not(.close-button) {
+  padding: 0.5rem 1rem;
+  background-color: var(--green-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.share-modal button:hover:not(.close-button) {
+  background-color: var(--dark-green-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.share-modal button:active:not(.close-button) {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  opacity: 0.9;
+  scale: 0.98;
+}
+
+.share-email-section form {
+  display: flex;
+  gap: 0.5rem;
+}

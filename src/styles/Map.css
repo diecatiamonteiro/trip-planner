@@ -1,0 +1,14 @@
+.numbered-marker {
+  background-color: #4285f4;
+  border-radius: 50%;
+  color: white;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+} 

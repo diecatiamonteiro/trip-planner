@@ -1,0 +1,210 @@
+.activity-list {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.activity-card-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  width: 98%;
+  transition: all 0.3s ease;
+}
+
+.activity-card {
+  position: relative;
+  background: var(--light-green-color);
+  padding: 20px;
+  border-radius: 8px;
+  flex: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.activity-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Input Styles */
+.activity-card input {
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 2px 12px;
+  font-size: 0.95rem;
+  background: var(--light-green-color);
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.activity-card input:hover {
+  border-color: var(--green-color);
+}
+
+.activity-card input:focus {
+  outline: none;
+  border-color: var(--green-color);
+  background-color: white;
+  box-shadow: 0 0 0 3px rgba(19, 104, 80, 0.1);
+}
+
+/* Title Input */
+.activity-card input[placeholder="Plan title"] {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--dark-green-color);
+}
+
+/* Time Inputs Container */
+.time-inputs {
+  display: flex;
+  gap: 20px;
+}
+
+/* Time Input Specific Styles */
+.time-inputs input {
+  width: 100px;
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Description Input */
+.activity-card input[placeholder="Description"] {
+  color: #555;
+  font-size: 1rem;
+}
+
+/* Price Input */
+.activity-card input[type="number"] {
+  width: 120px;
+  color: var(--dark-green-color);
+  font-size: 1rem;
+}
+
+/* Remove arrows from number input */
+.activity-card input[type="number"]::-webkit-inner-spin-button,
+.activity-card input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Icons Container */
+.activity-card-icons {
+  display: flex;
+  align-items: center;
+  padding: 20px 10px;
+}
+
+/* Delete Icon */
+.remove-activity-icon {
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 8px;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+  background-color: rgba(220, 53, 69, 0.1);
+  color: var(--dark-orange-color);
+}
+
+.remove-activity-icon:hover {
+  background-color: rgba(220, 53, 69, 0.2);
+  transform: scale(1.1);
+}
+
+.remove-activity-icon:active {
+  transform: scale(0.95);
+}
+
+/* Animation for removing cards */
+.activity-card-container.removing {
+  opacity: 0;
+  transform: translateX(-20px);
+  pointer-events: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .activity-card {
+    padding: 15px;
+  }
+
+  .time-inputs {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .time-inputs input {
+    width: 100%;
+  }
+}
+
+/* Price input styling */
+.price-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 120px;
+}
+
+.price-symbol {
+  position: absolute;
+  left: 10px;
+  color: #666;
+  pointer-events: none;
+}
+
+.price-container input {
+  padding-left: 25px !important;
+  width: 100%;
+}
+
+/* marker number */
+.activity-marker-number {
+  background-color: #4285f4;
+  color: white;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.activity-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.activity-number {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  background-color: #4285f4;
+  color: white;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 14px;
+  border: 2px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.activity-content {
+  margin-left: 34px;
+}
+

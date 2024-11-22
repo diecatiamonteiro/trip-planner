@@ -1,0 +1,211 @@
+.itinerary-container {
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 9rem;
+  z-index: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: calc(100vh - 12rem);
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.itinerary-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.itinerary-header h1 {
+  margin: 0;
+}
+
+.trip-overview {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+.trip-overview p {
+  color: var(--dark-green-color);
+}
+
+.action-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.action-buttons button:not(:last-child) {
+  padding: 1rem;
+  margin: 0 0.3rem;
+  font-size: 1rem;
+  background-color: var(--green-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.action-buttons button:not(:last-child):hover {
+  background-color: var(--dark-green-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.action-buttons button:last-child {
+  padding: 1rem;
+  margin: 0 0.3rem;
+  font-size: 1rem;
+  background-color: var(--dark-green-color);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.action-buttons button:last-child:hover {
+  background-color: var(--dark-green-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.action-buttons button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  opacity: 0.9;
+  scale: 0.98;
+}
+
+.summary-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  width: 100%;
+}
+
+.day-card {
+  border: 1px solid var(--light-green-color);
+  border-radius: 8px;
+  padding: 1rem;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.day-header {
+  border-bottom: 1px solid var(--light-green-color);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+}
+.day-header h2 {
+  margin: 0.5rem;
+}
+.day-header h2:first-child {
+  color: var(--dark-green-color);
+}
+
+.activities-list {
+  margin: 0.5rem 0;
+}
+
+.activity-item {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 1rem;
+  padding: 0.5rem;
+  background-color: var(--lightest-green-color);
+  border-radius: 4px;
+}
+
+.day-density {
+  text-align: right;
+  color: var(--dark-green-color);
+  font-size: 1.2rem;
+}
+
+/* when no plan is selected */
+
+.itinerary-container .no-plan-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  text-align: center;
+  font-size: 1.2rem;
+  max-width: 400px;
+  margin-top: 0.5rem;
+}
+
+.itinerary-container .no-plan-message p {
+  margin-bottom: 1rem;
+  color: #666;
+  font-size: 1.2rem;
+}
+
+.itinerary-container .no-plan-message button {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--green-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.itinerary-container .no-plan-message button:hover {
+  background-color: var(--dark-green-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.itinerary-container .no-plan-message button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+  opacity: 0.9;
+  scale: 0.98;
+}
+
+/* includes total of activities, € and density indicator */
+.day-header-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 0.5rem;
+  font-weight: bold;
+}
+
+/* density indicator */
+
+.density-indicator {
+  display: flex;
+  gap: 2px;
+  margin-left: 1rem;
+}
+
+.density-indicator span {
+  color: #e0e0e0; /* Light gray for inactive dots */
+  font-size: 16px;
+}
+
+/* Low density - first dot black */
+.density-low span:nth-child(1) {
+  color: #333;
+}
+
+/* Medium density - first two dots black */
+.density-medium span:nth-child(1),
+.density-medium span:nth-child(2) {
+  color: #333;
+}
+
+/* High density - all dots black */
+.density-high span:nth-child(1),
+.density-high span:nth-child(2),
+.density-high span:nth-child(3) {
+  color: #333;
+}
